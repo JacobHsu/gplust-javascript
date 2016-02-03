@@ -1,0 +1,40 @@
+<!--
+https://accounts.google.com/o/oauth2/auth?redirect_uri=storagerelay%3A%2F%2Fhttp%2Flocalhost%3Fid%3Dauth177023&response_type=permission&scope=email%20profile%20openid&openid.realm=&client_id=591553038495-2unhnpj4ivjkka5sq1o5f5217nqv94je.apps.googleusercontent.com&ss_domain=http%3A%2F%2Flocalhost&fetch_basic_profile=true
+
+auth?redirect_uri= &response_type= &scope=email &client_id &ss_domain= &fetch_basic_profile=
+
+檢視電子郵件地址
+查看您個人資料中的基本資訊
+
+Console:
+
+ID: 110701101465448553571
+Name: Jacob Hsu
+Image URL: https://lh3.googleusercontent.com/xxx/photo.jpg
+Email: jacob.hsu.tw@gmail.com
+ID Token: xxx
+-->  
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="591553038495-2unhnpj4ivjkka5sq1o5f5217nqv94je.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log("Name: " + profile.getName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+  </body>
+</html>
