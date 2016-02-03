@@ -7,15 +7,39 @@ git clone https://github.com/googleplus/gplus-quickstart-javascript.git
 ```
 
 * https://developers.google.com/identity/sign-in/web/  
+* [API Client Library for JavaScript ](https://developers.google.com/api-client-library/javascript/)
 
 # console
 
 https://console.developers.google.com/project/
- 
+
+資訊主頁 
+
+專案 ID
+591553038495
+
+啟用 API 並取得憑證 (如金鑰)
+
 憑證
 
-OAuth 2.0 用戶端 ID  
+### API 金鑰
+
+瀏覽器 API 金鑰  
+
+API 金鑰 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx //apiKey  
+
+接受這些 HTTP 參照網址 (網站) 發出的要求 (選填)  
+jacobhsu.github.io/*  
+localhost/*  
+
+
+### OAuth 2.0 用戶端 ID  
 Web client 1  
+
+網路應用程式 的用戶端編號
+
+用戶端 ID 591553038495-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com  //clientId  
+用戶端密碼 xxxxxxxxxxxxxxxxxxxxxxxx  
 
 已授權的 JavaScript 來源  
 http://jacobhsu.github.io  
